@@ -372,7 +372,8 @@ var PR=win['PR']={'createSimpleLexer':createSimpleLexer,'registerLangHandler':re
 
   // Stylesheets
   var linkEl = document.createElement('link');
-  linkEl.href = originBase + '/themes/'+theme+'.min.css';
+  // linkEl.href = originBase + '/themes/'+theme+'.min.css';
+  linkEl.href = originBase + theme+'.min.css';
   linkEl.rel = 'stylesheet';
   document.head.appendChild(linkEl);
 
@@ -382,7 +383,8 @@ var PR=win['PR']={'createSimpleLexer':createSimpleLexer,'registerLangHandler':re
   document.head.appendChild(linkEl);
 
   var linkEl = document.createElement('link');
-  linkEl.href = originBase + '/themes/bootstrap-responsive.min.css';
+  // linkEl.href = originBase + '/themes/bootstrap-responsive.min.css';
+  linkEl.href = originBase + '/bootstrap-responsive.min.css';
   linkEl.rel = 'stylesheet';
   document.head.appendChild(linkEl);
 
