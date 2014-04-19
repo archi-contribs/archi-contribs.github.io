@@ -371,11 +371,10 @@ var PR=win['PR']={'createSimpleLexer':createSimpleLexer,'registerLangHandler':re
   theme = theme.toLowerCase();
 
   // Stylesheets
-  var linkEl = document.createElement('link');
-  // linkEl.href = originBase + '/themes/'+theme+'.min.css';
-  linkEl.href = originBase + theme+'.min.css';
-  linkEl.rel = 'stylesheet';
-  document.head.appendChild(linkEl);
+  //var linkEl = document.createElement('link');
+  //linkEl.href = originBase + '/themes/bootstrap.min.css';
+  //linkEl.rel = 'stylesheet';
+  //document.head.appendChild(linkEl);
 
   var linkEl = document.createElement('link');
   linkEl.href = originBase + '/strapdown.css';
@@ -383,8 +382,7 @@ var PR=win['PR']={'createSimpleLexer':createSimpleLexer,'registerLangHandler':re
   document.head.appendChild(linkEl);
 
   var linkEl = document.createElement('link');
-  // linkEl.href = originBase + '/themes/bootstrap-responsive.min.css';
-  linkEl.href = originBase + '/bootstrap-responsive.min.css';
+  linkEl.href = originBase + '/themes/bootstrap-'+theme+'.min.css';
   linkEl.rel = 'stylesheet';
   document.head.appendChild(linkEl);
 
@@ -402,9 +400,10 @@ var PR=win['PR']={'createSimpleLexer':createSimpleLexer,'registerLangHandler':re
 
   // Insert navbar if there's none
   var newNode = document.createElement('div');
-  newNode.className = 'navbar navbar-fixed-top';
+  newNode.className = 'navbar navbar-default  navbar-fixed-top';
   if (!navbarEl && titleEl) {
-    newNode.innerHTML = '<div class="navbar-inner"> <div class="container"> <div id="headline" class="brand"> </div> </div> </div>';
+    //newNode.innerHTML = '<div class="navbar-inner"> <div class="container"> <div id="headline" class="brand"> </div> </div> </div>';
+    newNode.innerHTML = '<div class="container"> <div class="navbar-header"> <a class="navbar-brand" id="headline" href="#"> </a> </div> </div>';
     document.body.insertBefore(newNode, document.body.firstChild);
     var title = titleEl.innerHTML;
     var headlineEl = document.getElementById('headline');
